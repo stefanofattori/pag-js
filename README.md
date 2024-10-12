@@ -60,8 +60,9 @@ This script use modern Vanilla Javascript and it has no dependencies on external
                                                         Default: true */
                 defaultFilter: 'all'                 // Default filter - Default: all
 
-            };   
+            };
 			```
+			
 3. Initialises the class:  
 	` const gallery = new PagJS(options); `
 
@@ -107,9 +108,8 @@ This script use modern Vanilla Javascript and it has no dependencies on external
 		</div>
 	</div>
 
-	<div class="pagination"></div>   
-	```  
-
+	<div class="pagination"></div>
+	```
 
 
 ### === Privacy ===
