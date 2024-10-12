@@ -29,7 +29,7 @@ This script use modern Vanilla Javascript and it has no dependencies on external
 ## === Installation and Usage ===
 
 1. Import the script into your HTML file simply using:  
-` <script src="pag-js-v1.0.min.js"></script>  `\    
+` <script src="pag-js-v1.0.min.js"></script>  ` <br>       
 ` <script src="http://cdn....pag-js-v1.0.min.js"></script> `
 
 2. Initialises a constant variable with the parameters:  
