@@ -69,7 +69,9 @@ OR
 ```
 
 3. Initialises the class:  
-	` const gallery = new PagJS(options); `
+``` 
+	const gallery = new PagJS(options); 
+``` 
 
 4. Use ` data-categories="1" ` to set the membership of the item element to the respective filter.    
    Use ` data-filter="all" ` to set to set the filter to be activated on the button	
