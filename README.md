@@ -9,6 +9,7 @@
 **License:**    	Commercial    
 **License URL:**	https://www.stefanofattori.it/pag-js/license/
 
+
 ## Description
 
 PAG JS is an animated and filterable gallery with pagination, beautiful animations and customisable parameters.  
@@ -24,7 +25,7 @@ The script file size ~ 15 KB
 ```
 OR using CDN:
 ```     
- <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.0/dist/pag-js.min.js"></script> 
+ <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.1/dist/pag-js.min.js"></script> 
 ```
 
 2. Initialises a constant variable with the parameters:  
@@ -124,6 +125,11 @@ No data is saved in the database or transferred.
 
 
 ## === Changelog ===
+
+#### = 1.1 =
+* [NEW] - Added add and remove active class to filter buttons elements
+* [NEW] - Set a transition attribute when the container changes its height
+
 
 #### = 1.0 =
 * [NEW] - First version of the script written  
