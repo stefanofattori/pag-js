@@ -33,7 +33,8 @@ This script use modern Vanilla Javascript and it has no dependencies on external
 	<script src="http://cdn....pag-js-v1.0.min.js"></script>
 
 2. Initialises a constant variable with the parameters:  
-	``` const options = {
+	```   
+	const options = {
                 containerClass: '.gallery',          // gallery container - Default: .pag-gallery
                 itemContainerClass: '.item',         // gallery item - Default: .item
                 paginationClass: '.pagination',      // pagination buttons - Default: .pagination
@@ -59,15 +60,17 @@ This script use modern Vanilla Javascript and it has no dependencies on external
                                                         Default: true */
                 defaultFilter: 'all'                 // Default filter - Default: all
 
-            }; ```
+            };   
+			```
 3. Initialises the class:  
 	` const gallery = new PagJS(options); `
 
-4. Use ` data-categories="1" ` to set the membership of the item element to the respective filter
+4. Use ` data-categories="1" ` to set the membership of the item element to the respective filter.    
    Use ` data-filter="all" ` to set to set the filter to be activated on the button	
 
 5. HTML structure could be like this example:  
-  ``` <div class="filters">
+  ```  
+    <div class="filters">
         <button data-filter="all">ALL</button>
         <button data-filter="1">FILTER 1</button>
         <button data-filter="2">FILTER 2</button>
@@ -104,7 +107,8 @@ This script use modern Vanilla Javascript and it has no dependencies on external
 		</div>
 	</div>
 
-	<div class="pagination"></div> ```  
+	<div class="pagination"></div>   
+	```  
 
 
 
