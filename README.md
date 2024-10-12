@@ -28,13 +28,13 @@ The script file size ~ 15 KB
 
 ## Installation and Usage 
 
-1. Import the script into your HTML file simply using:  
+1. Download and import the script into your HTML file simply using:  
 ```
  <script src="pag-js-v1.0.min.js"></script>   
 ```
-OR
+OR using CDN:
 ```     
- <script src="http://cdn....pag-js-v1.0.min.js"></script> 
+ <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.0/dist/pag-js.min.js"></script> 
 ```
 
 2. Initialises a constant variable with the parameters:  
