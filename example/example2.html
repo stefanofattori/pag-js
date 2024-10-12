@@ -25,6 +25,7 @@
         h1{
                 margin-bottom: 3rem;
                 font-size: 48px;
+                text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
         }
         @media (max-width: 1024px){
             h1{
@@ -33,7 +34,7 @@
         }
             
         button{
-            border-radius: 15px;
+            border-radius: 5px;
             border: none;
             padding: 10px 15px;
             background-color: #007bff;
@@ -93,11 +94,20 @@
             background:inherit;
         }
 
+        .active{
+            background: red;
+        }
+
+        .pagination button:disabled{
+            background: rgb(255, 174, 0);
+            color: #fff;
+            text-decoration: underline;
+        }
 
 
     </style>
 
-    <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.0/dist/pag-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.1/dist/pag-js.min.js"></script>
 
     <script>
 
