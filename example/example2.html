@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAG JS - EXAMPLE 2 WITH TEXT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 1300px;
+            margin: 25px auto;
+            font-family: "Poppins";
+            padding: 0 10px;
+        }
+
+        h1{
+                margin-bottom: 3rem;
+                font-size: 48px;
+        }
+        @media (max-width: 1024px){
+            h1{
+                font-size: 28px;     
+            }   
+        }
+            
+        button{
+            border-radius: 15px;
+            border: none;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px 0px #00000043;
+        }
+
+        button:hover{
+            background-color: blue;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .filters, .pagination{
+            display: flex;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        figure {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            max-height: 50%;
+            width: 100%;
+            background: #ffffffde;
+            padding: 20px;
+
+        }
+
+
+       .item {
+            position: relative;
+            border-radius: 15px;
+            margin: 0;
+            overflow: hidden;
+            background: #eee;
+            padding: 25px;
+            object-fit: cover;
+        }
+
+        .item:after{
+            content:"";
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            height:25px;
+            display:block;
+            background:inherit;
+        }
+
+
+
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.0/dist/pag-js.min.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+
+            /* Initialization */
+            const options = {
+                containerClass: '.pag-gallery',          // gallery container - Default: .pag-gallery
+                itemContainerClass: '.item',         // gallery item - Default: .item
+                paginationClass: '.pagination',      // pagination buttons - Default: .pagination
+                filtersClass: '.filters',            // filter buttons - Default: .filters
+                aspectRatio: '16 / 9',               // images aspect ratio - Default: 3 / 2
+                gap: 20,                             // supports only px - Default: 10
+                itemsPerPage: 6,                    // number of items per page to show ( 0 -> Disable Pagination ) - Default: 0
+                columns: {                           // colums number of layout (responsive)
+                    HD: 4,                           // Desktop HD > 1200px - Default: 4/3/2/1
+                    DESKTOP: 3,                      // Desktop    > 1024px  
+                    TABLET: 2,                       // Tablet     > 768px
+                    SMARTPHONE: 1                    // Smartphone < 768px  
+                },
+                objectFit: 'cover',                  // Items Image CSS behavior ( contain|cover|fill|scale-down|none ) - Default: cover
+                animation: 'slide',                  // Animation type (none|fade|zoom|slide|smart) - Default: smart
+                animationDuration: 0.5,              // Animation duration (s) - Default: 0.5
+                easing: 'ease-out',                    /* Animation easing type. All CSS easing ( linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit )
+                                                        Default: linear
+                                                        example - simulate bounce1: cubic-bezier(0.68, -0.55, 0.27, 1.55) 
+                                                        example - simulate bounce2: cubic-bezier(0.34, 1.56, 0.64, 1) */
+                animationAsync: true,               /* FALSE -> the display animations will start after the hiding animations have finished                
+                                                        TRUE -> the display animations will start immediately together with the hiding animations 
+                                                        Default: true */
+                defaultFilter: 'all'                 // Default filter - Default: all
+
+            };
+            
+            const gallery = new PagJS(options);
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <h1>PAG JS - EXAMPLE 2 WITH TEXT</h1>
+
+    <div class="filters">
+        <button data-filter="all">ALL</button>
+        <button data-filter="1">FILTER 1</button>
+        <button data-filter="2">FILTER 2</button>
+        <button data-filter="3">FILTER 3</button>
+    </div>
+
+    <div class="pag-gallery">
+
+
+
+        <div class="item" data-categories="1">
+          <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt auctor magna, a aliquet lectus
+                lobortis sit amet. Curabitur sodales nisi sit amet lectus finibus, a consequat lacus sollicitudin.
+                Suspendisse volutpat felis eu sapien cursus, sit amet efficitur ligula accumsan. Fusce dignissim quam
+                non sapien dignissim, sit amet congue sapien dapibus. Praesent euismod, nunc sit amet auctor posuere,
+                orci dui posuere dolor, et consectetur enim mauris non odio. Maecenas laoreet velit vel varius
+                tincidunt. Proin semper nisi et tortor ullamcorper sodales. Donec consequat velit nec ex efficitur
+                consequat. Ut accumsan felis vel lorem facilisis, nec tempus sem ullamcorper. Cras eu nunc non arcu
+                fermentum egestas. Nullam tristique luctus libero in lacinia. Donec sagittis fringilla libero, ac congue
+                sapien consectetur sit amet. Sed condimentum arcu vitae augue dapibus vehicula.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt auctor magna, a aliquet lectus
+                lobortis sit amet. Curabitur sodales nisi sit amet lectus finibus, a consequat lacus sollicitudin.
+                Suspendisse volutpat felis eu sapien cursus, sit amet efficitur ligula accumsan. Fusce dignissim quam
+                non sapien dignissim, sit amet congue sapien dapibus. Praesent euismod, nunc sit amet auctor posuere,
+                orci dui posuere dolor, et consectetur enim mauris non odio. Maecenas laoreet velit vel varius
+                tincidunt. Proin semper nisi et tortor ullamcorper sodales. Donec consequat velit nec ex efficitur
+                consequat. Ut accumsan felis vel lorem facilisis, nec tempus sem ullamcorper. Cras eu nunc non arcu
+                fermentum egestas. Nullam tristique luctus libero in lacinia. Donec sagittis fringilla libero, ac congue
+                sapien consectetur sit amet. Sed condimentum arcu vitae augue dapibus vehicula.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1,2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit libero. Nunc egestas arcu non justo
+                scelerisque, a fermentum quam bibendum. Donec venenatis orci sit amet sapien vehicula, nec fermentum
+                augue eleifend. Integer at sem vel purus blandit sollicitudin sit amet eget mi. Donec pulvinar tempor
+                metus, a suscipit magna scelerisque at. Vivamus faucibus risus nec libero hendrerit, sit amet luctus
+                dolor egestas. Mauris fermentum arcu ac augue dictum, vitae dapibus erat lobortis. Quisque vitae enim
+                vitae dui tempus interdum sit amet sed odio. Integer luctus, erat eget volutpat convallis, risus nulla
+                tempus lorem, at facilisis erat lorem ac elit.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod est sed quam faucibus, non
+                volutpat lorem fermentum. Etiam ac nisi vel odio bibendum pretium ac quis ex. Fusce mollis felis et ante
+                iaculis, vel auctor turpis dapibus. Nulla facilisi. Nam sed odio at quam scelerisque porttitor et vel
+                lectus. In id lacus arcu. Mauris et varius turpis. Pellentesque at nulla fermentum, facilisis nunc vel,
+                dignissim odio. Curabitur bibendum ante eu augue volutpat, nec vehicula nisi fermentum. Nulla malesuada,
+                urna at venenatis posuere, velit ex tempus justo, non consequat libero purus et turpis.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet libero non arcu varius
+                facilisis nec vel purus. Quisque ullamcorper quam sit amet venenatis convallis. Fusce vel dui eget nisi
+                aliquet luctus nec et magna. Aenean mollis felis sit amet fringilla scelerisque. Sed vehicula lacus eu
+                lectus tristique consequat. Cras eget libero ante. Vivamus convallis gravida odio ac aliquet.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet pharetra eleifend,
+                lectus leo pharetra eros, a interdum purus neque sit amet orci. Fusce euismod pharetra mi ut pretium.
+                Nullam vestibulum urna lorem, vel sodales dui elementum in. Suspendisse potenti. Fusce vestibulum libero
+                a felis rutrum congue. Ut sit amet risus in lectus cursus vehicula vel in enim. Fusce sollicitudin
+                faucibus magna, eu tempor ligula laoreet in.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et libero ut urna auctor scelerisque.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante
+                ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam id libero quis odio
+                mollis venenatis ac at augue. Mauris convallis interdum nisi id vestibulum.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum tincidunt eros, a aliquam
+                orci sagittis eget. Nam ullamcorper gravida pharetra. Ut pretium ex sit amet dui ornare, quis egestas
+                turpis molestie. Sed fringilla aliquam metus ut rhoncus. Duis a dapibus ipsum. Nulla facilisi. Ut mollis
+                lectus ac libero feugiat, nec placerat orci consectetur. Vivamus fringilla felis vel vehicula auctor.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Etiam sagittis pretium erat,
+                sit amet tincidunt lectus accumsan nec. Fusce bibendum venenatis enim id dignissim. Duis ut lorem ut
+                libero posuere luctus. Nullam eu sem ut metus dignissim tincidunt id nec velit. Nam at tincidunt odio.
+                Vestibulum suscipit congue nunc non vestibulum.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a nisl nec est vestibulum pretium. Ut
+                pulvinar scelerisque nibh ac tristique. Integer in cursus ex, ac hendrerit elit. Nullam laoreet, velit
+                ac lacinia fringilla, neque ante molestie sapien, eu consectetur mi neque at orci. Aenean sit amet nibh
+                eget neque scelerisque rhoncus et eget augue.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt auctor magna, a aliquet lectus
+                lobortis sit amet. Curabitur sodales nisi sit amet lectus finibus, a consequat lacus sollicitudin.
+                Suspendisse volutpat felis eu sapien cursus, sit amet efficitur ligula accumsan. Fusce dignissim quam
+                non sapien dignissim, sit amet congue sapien dapibus. Praesent euismod, nunc sit amet auctor posuere,
+                orci dui posuere dolor, et consectetur enim mauris non odio. Maecenas laoreet velit vel varius
+                tincidunt. Proin semper nisi et tortor ullamcorper sodales. Donec consequat velit nec ex efficitur
+                consequat. Ut accumsan felis vel lorem facilisis, nec tempus sem ullamcorper. Cras eu nunc non arcu
+                fermentum egestas. Nullam tristique luctus libero in lacinia. Donec sagittis fringilla libero, ac congue
+                sapien consectetur sit amet. Sed condimentum arcu vitae augue dapibus vehicula.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu nulla a nisl facilisis
+                fermentum. Nam tincidunt dapibus lorem, in tempus lorem vulputate in. Aenean vel nulla vitae risus
+                scelerisque suscipit. Aliquam id posuere elit. Etiam vehicula lacinia facilisis. Nam dapibus enim in
+                quam vehicula sollicitudin. Mauris vestibulum nulla vitae vestibulum gravida. Cras sit amet accumsan
+                turpis, nec rhoncus velit. Nunc rutrum elit vel eros convallis, at lobortis turpis vehicula. Nulla quis
+                magna dapibus, tincidunt dui sed, dignissim ex.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1,2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit libero. Nunc egestas arcu non justo
+                scelerisque, a fermentum quam bibendum. Donec venenatis orci sit amet sapien vehicula, nec fermentum
+                augue eleifend. Integer at sem vel purus blandit sollicitudin sit amet eget mi. Donec pulvinar tempor
+                metus, a suscipit magna scelerisque at. Vivamus faucibus risus nec libero hendrerit, sit amet luctus
+                dolor egestas. Mauris fermentum arcu ac augue dictum, vitae dapibus erat lobortis. Quisque vitae enim
+                vitae dui tempus interdum sit amet sed odio. Integer luctus, erat eget volutpat convallis, risus nulla
+                tempus lorem, at facilisis erat lorem ac elit.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod est sed quam faucibus, non
+                volutpat lorem fermentum. Etiam ac nisi vel odio bibendum pretium ac quis ex. Fusce mollis felis et ante
+                iaculis, vel auctor turpis dapibus. Nulla facilisi. Nam sed odio at quam scelerisque porttitor et vel
+                lectus. In id lacus arcu. Mauris et varius turpis. Pellentesque at nulla fermentum, facilisis nunc vel,
+                dignissim odio. Curabitur bibendum ante eu augue volutpat, nec vehicula nisi fermentum. Nulla malesuada,
+                urna at venenatis posuere, velit ex tempus justo, non consequat libero purus et turpis.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet libero non arcu varius
+                facilisis nec vel purus. Quisque ullamcorper quam sit amet venenatis convallis. Fusce vel dui eget nisi
+                aliquet luctus nec et magna. Aenean mollis felis sit amet fringilla scelerisque. Sed vehicula lacus eu
+                lectus tristique consequat. Cras eget libero ante. Vivamus convallis gravida odio ac aliquet.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet pharetra eleifend,
+                lectus leo pharetra eros, a interdum purus neque sit amet orci. Fusce euismod pharetra mi ut pretium.
+                Nullam vestibulum urna lorem, vel sodales dui elementum in. Suspendisse potenti. Fusce vestibulum libero
+                a felis rutrum congue. Ut sit amet risus in lectus cursus vehicula vel in enim. Fusce sollicitudin
+                faucibus magna, eu tempor ligula laoreet in.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et libero ut urna auctor scelerisque.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante
+                ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam id libero quis odio
+                mollis venenatis ac at augue. Mauris convallis interdum nisi id vestibulum.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum tincidunt eros, a aliquam
+                orci sagittis eget. Nam ullamcorper gravida pharetra. Ut pretium ex sit amet dui ornare, quis egestas
+                turpis molestie. Sed fringilla aliquam metus ut rhoncus. Duis a dapibus ipsum. Nulla facilisi. Ut mollis
+                lectus ac libero feugiat, nec placerat orci consectetur. Vivamus fringilla felis vel vehicula auctor.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Etiam sagittis pretium erat,
+                sit amet tincidunt lectus accumsan nec. Fusce bibendum venenatis enim id dignissim. Duis ut lorem ut
+                libero posuere luctus. Nullam eu sem ut metus dignissim tincidunt id nec velit. Nam at tincidunt odio.
+                Vestibulum suscipit congue nunc non vestibulum.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a nisl nec est vestibulum pretium. Ut
+                pulvinar scelerisque nibh ac tristique. Integer in cursus ex, ac hendrerit elit. Nullam laoreet, velit
+                ac lacinia fringilla, neque ante molestie sapien, eu consectetur mi neque at orci. Aenean sit amet nibh
+                eget neque scelerisque rhoncus et eget augue.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt auctor magna, a aliquet lectus
+                lobortis sit amet. Curabitur sodales nisi sit amet lectus finibus, a consequat lacus sollicitudin.
+                Suspendisse volutpat felis eu sapien cursus, sit amet efficitur ligula accumsan. Fusce dignissim quam
+                non sapien dignissim, sit amet congue sapien dapibus. Praesent euismod, nunc sit amet auctor posuere,
+                orci dui posuere dolor, et consectetur enim mauris non odio. Maecenas laoreet velit vel varius
+                tincidunt. Proin semper nisi et tortor ullamcorper sodales. Donec consequat velit nec ex efficitur
+                consequat. Ut accumsan felis vel lorem facilisis, nec tempus sem ullamcorper. Cras eu nunc non arcu
+                fermentum egestas. Nullam tristique luctus libero in lacinia. Donec sagittis fringilla libero, ac congue
+                sapien consectetur sit amet. Sed condimentum arcu vitae augue dapibus vehicula.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu nulla a nisl facilisis
+                fermentum. Nam tincidunt dapibus lorem, in tempus lorem vulputate in. Aenean vel nulla vitae risus
+                scelerisque suscipit. Aliquam id posuere elit. Etiam vehicula lacinia facilisis. Nam dapibus enim in
+                quam vehicula sollicitudin. Mauris vestibulum nulla vitae vestibulum gravida. Cras sit amet accumsan
+                turpis, nec rhoncus velit. Nunc rutrum elit vel eros convallis, at lobortis turpis vehicula. Nulla quis
+                magna dapibus, tincidunt dui sed, dignissim ex.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1,2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit libero. Nunc egestas arcu non justo
+                scelerisque, a fermentum quam bibendum. Donec venenatis orci sit amet sapien vehicula, nec fermentum
+                augue eleifend. Integer at sem vel purus blandit sollicitudin sit amet eget mi. Donec pulvinar tempor
+                metus, a suscipit magna scelerisque at. Vivamus faucibus risus nec libero hendrerit, sit amet luctus
+                dolor egestas. Mauris fermentum arcu ac augue dictum, vitae dapibus erat lobortis. Quisque vitae enim
+                vitae dui tempus interdum sit amet sed odio. Integer luctus, erat eget volutpat convallis, risus nulla
+                tempus lorem, at facilisis erat lorem ac elit.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod est sed quam faucibus, non
+                volutpat lorem fermentum. Etiam ac nisi vel odio bibendum pretium ac quis ex. Fusce mollis felis et ante
+                iaculis, vel auctor turpis dapibus. Nulla facilisi. Nam sed odio at quam scelerisque porttitor et vel
+                lectus. In id lacus arcu. Mauris et varius turpis. Pellentesque at nulla fermentum, facilisis nunc vel,
+                dignissim odio. Curabitur bibendum ante eu augue volutpat, nec vehicula nisi fermentum. Nulla malesuada,
+                urna at venenatis posuere, velit ex tempus justo, non consequat libero purus et turpis.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet libero non arcu varius
+                facilisis nec vel purus. Quisque ullamcorper quam sit amet venenatis convallis. Fusce vel dui eget nisi
+                aliquet luctus nec et magna. Aenean mollis felis sit amet fringilla scelerisque. Sed vehicula lacus eu
+                lectus tristique consequat. Cras eget libero ante. Vivamus convallis gravida odio ac aliquet.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet pharetra eleifend,
+                lectus leo pharetra eros, a interdum purus neque sit amet orci. Fusce euismod pharetra mi ut pretium.
+                Nullam vestibulum urna lorem, vel sodales dui elementum in. Suspendisse potenti. Fusce vestibulum libero
+                a felis rutrum congue. Ut sit amet risus in lectus cursus vehicula vel in enim. Fusce sollicitudin
+                faucibus magna, eu tempor ligula laoreet in.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et libero ut urna auctor scelerisque.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante
+                ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam id libero quis odio
+                mollis venenatis ac at augue. Mauris convallis interdum nisi id vestibulum.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum tincidunt eros, a aliquam
+                orci sagittis eget. Nam ullamcorper gravida pharetra. Ut pretium ex sit amet dui ornare, quis egestas
+                turpis molestie. Sed fringilla aliquam metus ut rhoncus. Duis a dapibus ipsum. Nulla facilisi. Ut mollis
+                lectus ac libero feugiat, nec placerat orci consectetur. Vivamus fringilla felis vel vehicula auctor.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Etiam sagittis pretium erat,
+                sit amet tincidunt lectus accumsan nec. Fusce bibendum venenatis enim id dignissim. Duis ut lorem ut
+                libero posuere luctus. Nullam eu sem ut metus dignissim tincidunt id nec velit. Nam at tincidunt odio.
+                Vestibulum suscipit congue nunc non vestibulum.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a nisl nec est vestibulum pretium. Ut
+                pulvinar scelerisque nibh ac tristique. Integer in cursus ex, ac hendrerit elit. Nullam laoreet, velit
+                ac lacinia fringilla, neque ante molestie sapien, eu consectetur mi neque at orci. Aenean sit amet nibh
+                eget neque scelerisque rhoncus et eget augue.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt auctor magna, a aliquet lectus
+                lobortis sit amet. Curabitur sodales nisi sit amet lectus finibus, a consequat lacus sollicitudin.
+                Suspendisse volutpat felis eu sapien cursus, sit amet efficitur ligula accumsan. Fusce dignissim quam
+                non sapien dignissim, sit amet congue sapien dapibus. Praesent euismod, nunc sit amet auctor posuere,
+                orci dui posuere dolor, et consectetur enim mauris non odio. Maecenas laoreet velit vel varius
+                tincidunt. Proin semper nisi et tortor ullamcorper sodales. Donec consequat velit nec ex efficitur
+                consequat. Ut accumsan felis vel lorem facilisis, nec tempus sem ullamcorper. Cras eu nunc non arcu
+                fermentum egestas. Nullam tristique luctus libero in lacinia. Donec sagittis fringilla libero, ac congue
+                sapien consectetur sit amet. Sed condimentum arcu vitae augue dapibus vehicula.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu nulla a nisl facilisis
+                fermentum. Nam tincidunt dapibus lorem, in tempus lorem vulputate in. Aenean vel nulla vitae risus
+                scelerisque suscipit. Aliquam id posuere elit. Etiam vehicula lacinia facilisis. Nam dapibus enim in
+                quam vehicula sollicitudin. Mauris vestibulum nulla vitae vestibulum gravida. Cras sit amet accumsan
+                turpis, nec rhoncus velit. Nunc rutrum elit vel eros convallis, at lobortis turpis vehicula. Nulla quis
+                magna dapibus, tincidunt dui sed, dignissim ex.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1,2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac elit libero. Nunc egestas arcu non justo
+                scelerisque, a fermentum quam bibendum. Donec venenatis orci sit amet sapien vehicula, nec fermentum
+                augue eleifend. Integer at sem vel purus blandit sollicitudin sit amet eget mi. Donec pulvinar tempor
+                metus, a suscipit magna scelerisque at. Vivamus faucibus risus nec libero hendrerit, sit amet luctus
+                dolor egestas. Mauris fermentum arcu ac augue dictum, vitae dapibus erat lobortis. Quisque vitae enim
+                vitae dui tempus interdum sit amet sed odio. Integer luctus, erat eget volutpat convallis, risus nulla
+                tempus lorem, at facilisis erat lorem ac elit.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod est sed quam faucibus, non
+                volutpat lorem fermentum. Etiam ac nisi vel odio bibendum pretium ac quis ex. Fusce mollis felis et ante
+                iaculis, vel auctor turpis dapibus. Nulla facilisi. Nam sed odio at quam scelerisque porttitor et vel
+                lectus. In id lacus arcu. Mauris et varius turpis. Pellentesque at nulla fermentum, facilisis nunc vel,
+                dignissim odio. Curabitur bibendum ante eu augue volutpat, nec vehicula nisi fermentum. Nulla malesuada,
+                urna at venenatis posuere, velit ex tempus justo, non consequat libero purus et turpis.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet libero non arcu varius
+                facilisis nec vel purus. Quisque ullamcorper quam sit amet venenatis convallis. Fusce vel dui eget nisi
+                aliquet luctus nec et magna. Aenean mollis felis sit amet fringilla scelerisque. Sed vehicula lacus eu
+                lectus tristique consequat. Cras eget libero ante. Vivamus convallis gravida odio ac aliquet.
+            </div>
+        </div>
+
+        <div class="item" data-categories="2">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet pharetra eleifend,
+                lectus leo pharetra eros, a interdum purus neque sit amet orci. Fusce euismod pharetra mi ut pretium.
+                Nullam vestibulum urna lorem, vel sodales dui elementum in. Suspendisse potenti. Fusce vestibulum libero
+                a felis rutrum congue. Ut sit amet risus in lectus cursus vehicula vel in enim. Fusce sollicitudin
+                faucibus magna, eu tempor ligula laoreet in.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et libero ut urna auctor scelerisque.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante
+                ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam id libero quis odio
+                mollis venenatis ac at augue. Mauris convallis interdum nisi id vestibulum.
+            </div>
+        </div>
+
+        <div class="item" data-categories="3">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum tincidunt eros, a aliquam
+                orci sagittis eget. Nam ullamcorper gravida pharetra. Ut pretium ex sit amet dui ornare, quis egestas
+                turpis molestie. Sed fringilla aliquam metus ut rhoncus. Duis a dapibus ipsum. Nulla facilisi. Ut mollis
+                lectus ac libero feugiat, nec placerat orci consectetur. Vivamus fringilla felis vel vehicula auctor.
+            </div>
+        </div>
+
+        <div class="item" data-categories="3">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Etiam sagittis pretium erat,
+                sit amet tincidunt lectus accumsan nec. Fusce bibendum venenatis enim id dignissim. Duis ut lorem ut
+                libero posuere luctus. Nullam eu sem ut metus dignissim tincidunt id nec velit. Nam at tincidunt odio.
+                Vestibulum suscipit congue nunc non vestibulum.
+            </div>
+        </div>
+
+        <div class="item" data-categories="1">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a nisl nec est vestibulum pretium. Ut
+                pulvinar scelerisque nibh ac tristique. Integer in cursus ex, ac hendrerit elit. Nullam laoreet, velit
+                ac lacinia fringilla, neque ante molestie sapien, eu consectetur mi neque at orci. Aenean sit amet nibh
+                eget neque scelerisque rhoncus et eget augue.
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div class="pagination"></div>
+
+
+</body>
+
+</html>
