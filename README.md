@@ -22,9 +22,9 @@ License URI:	https://www.stefanofattori.it/pag-js/license/
 ## Description
 
 PAG JS is an animated and filterable gallery with pagination, beautiful animations and customisable parameters.  
-This script use modern Vanilla Javascript and it has no dependencies on external libraries.
+This script use modern Vanilla Javascript and it has no dependencies on external libraries.    
 
-
+The script file size ~ 15 KB
 
 ## Installation and Usage 
 
