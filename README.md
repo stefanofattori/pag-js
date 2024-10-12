@@ -21,7 +21,7 @@ The script file size ~ 15 KB
 
 1. Download and import the script into your HTML file simply using:  
 ```
- <script src="pag-js-v1.0.min.js"></script>   
+ <script src="pag-js.min.js"></script>   
 ```
 OR using CDN:
 ```     
