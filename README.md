@@ -118,28 +118,28 @@ OR
 	<div class="pagination"></div>
 ```
 
-### Browser support
+## Browser support
 All modern browsers.   
 Old IE is not supported.
 
-### Donate
+## Donate
 Did you enjoy PAG JS? PAG JS is entirely created and supported by me, it's sold at a very cheap price, if you like the library and would like to make a further contribution to the project, feel free to donate:       
 
 https://paypal.me/stefanofattori89
 
 
-### Privacy 
+## Privacy 
 PAG JS  doesn't uses LocalStorage to save the setting.  
 No data is saved in the database or transferred.  
 
 
-### === Changelog ===
+## === Changelog ===
 
 #### = 1.0 =
 * [NEW] - First version of the script written  
 
 
-### License
+## License
 PAG JS is licensed under a Commercial License. Enjoy! 
 
 
