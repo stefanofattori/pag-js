@@ -1,13 +1,13 @@
 # PAG JS - Prismatic Animated Gallery
 
-Script Name: 	PAG JS   
-Library URL:	https://www.stefanofattori.it/pag-js/    
-Author:     	Stefano Fattori   
-Author Website:	https://www.stefanofattori.it   
-Description: PAG JS is an animated and filterable vanilla Javascript library gallery with pagination, beautiful animations and customisable parameters.    
-Browser compatibility: This script uses Animate() Javascript function. Check you browser compatibility at https://developer.mozilla.org/en-US/docs/Web/API/Element/animate    
-License:    	Commercial    
-License URL:	https://www.stefanofattori.it/pag-js/license/
+**Script Name:** 	PAG JS   
+**Library URL:**	https://www.stefanofattori.it/pag-js/    
+**Author:**     	Stefano Fattori   
+**Author Website:**	https://www.stefanofattori.it   
+**Description:** PAG JS is an animated and filterable vanilla Javascript library gallery with pagination, beautiful animations and customisable parameters.    
+**Browser compatibility:** This script uses Animate() Javascript function. Check you browser compatibility at https://developer.mozilla.org/en-US/docs/Web/API/Element/animate    
+**License:**    	Commercial    
+**License URL:**	https://www.stefanofattori.it/pag-js/license/
 
 ## Description
 
