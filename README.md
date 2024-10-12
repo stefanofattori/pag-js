@@ -29,11 +29,11 @@ This script use modern Vanilla Javascript and it has no dependencies on external
 ## === Installation and Usage ===
 
 1. Import the script into your HTML file simply using:  
-	<script src="pag-js-v1.0.min.js"></script>
+	<script src="pag-js-v1.0.min.js"></script>    	
 	<script src="http://cdn....pag-js-v1.0.min.js"></script>
 
 2. Initialises a constant variable with the parameters:  
-	```   
+```
 	const options = {
                 containerClass: '.gallery',          // gallery container - Default: .pag-gallery
                 itemContainerClass: '.item',         // gallery item - Default: .item
@@ -61,16 +61,16 @@ This script use modern Vanilla Javascript and it has no dependencies on external
                 defaultFilter: 'all'                 // Default filter - Default: all
 
             };
-			```
-			
+```
+
 3. Initialises the class:  
 	` const gallery = new PagJS(options); `
 
 4. Use ` data-categories="1" ` to set the membership of the item element to the respective filter.    
    Use ` data-filter="all" ` to set to set the filter to be activated on the button	
 
-5. HTML structure could be like this example:  
-  ```  
+5. HTML structure could be like this example: 
+``` 
     <div class="filters">
         <button data-filter="all">ALL</button>
         <button data-filter="1">FILTER 1</button>
@@ -109,7 +109,7 @@ This script use modern Vanilla Javascript and it has no dependencies on external
 	</div>
 
 	<div class="pagination"></div>
-	```
+```
 
 
 ### === Privacy ===
