@@ -1,4 +1,4 @@
-# === PAG JS - Prismatic Animated Gallery ===
+# PAG JS - Prismatic Animated Gallery
 
 Script Name: 	PAG JS 
 
@@ -19,14 +19,14 @@ License:    	Commercial
 License URI:	https://www.stefanofattori.it/pag-js/license/
 
 
-## === Description ===
+## Description
 
 PAG JS is an animated and filterable gallery with pagination, beautiful animations and customisable parameters.  
 This script use modern Vanilla Javascript and it has no dependencies on external libraries.
 
 
 
-## === Installation and Usage ===
+## Installation and Usage 
 
 1. Import the script into your HTML file simply using:  
 ```
@@ -118,11 +118,19 @@ OR
 	<div class="pagination"></div>
 ```
 
+### Browser support
+All modern browsers.   
+Old IE is not supported.
 
-### === Privacy ===
+### Donate
+Did you enjoy PAG JS? PAG JS is entirely created and supported by me, it's sold at a very cheap price, if you like the library and would like to make a further contribution to the project, feel free to donate:       
+
+https://paypal.me/stefanofattori89
+
+
+### Privacy 
 PAG JS  doesn't uses LocalStorage to save the setting.  
 No data is saved in the database or transferred.  
-
 
 
 ### === Changelog ===
@@ -130,6 +138,9 @@ No data is saved in the database or transferred.
 #### = 1.0 =
 * [NEW] - First version of the script written  
 
+
+### License
+PAG JS is licensed under a Commercial License. Enjoy! 
 
 
 *Everything else used in this script has been created by me (Stefano Fattori), especially for the PAG JS script and is distributed under Commercial license.*  
