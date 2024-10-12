@@ -8,7 +8,7 @@ Author:     	Stefano Fattori
 
 Author URI:	https://www.stefanofattori.it
 
-Description: PAG JS is an animated and filterable gallery with pagination, beautiful animations and customisable parameters.
+Description: PAG JS is an animated and filterable vanilla Javascript library gallery with pagination, beautiful animations and customisable parameters.
 
 Browser compatibility: This script uses Animate() Javascript function. Check you browser compatibility at https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
 
