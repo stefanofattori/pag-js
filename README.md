@@ -21,19 +21,19 @@ License URI:	https://www.stefanofattori.it/pag-js/license/
 
 ## === Description ===
 
-PAG JS is an animated and filterable gallery with pagination, beautiful animations and customisable parameters.
+PAG JS is an animated and filterable gallery with pagination, beautiful animations and customisable parameters.  
 This script use modern Vanilla Javascript and it has no dependencies on external libraries.
 
 
 
 ## === Installation and Usage ===
 
-1. Import the script into your HTML file simply using:
+1. Import the script into your HTML file simply using:  
 	<script src="pag-js-v1.0.min.js"></script>
 	<script src="http://cdn....pag-js-v1.0.min.js"></script>
 
-2. Initialises a constant variable with the parameters:
-	` const options = {
+2. Initialises a constant variable with the parameters:  
+	``` const options = {
                 containerClass: '.gallery',          // gallery container - Default: .pag-gallery
                 itemContainerClass: '.item',         // gallery item - Default: .item
                 paginationClass: '.pagination',      // pagination buttons - Default: .pagination
@@ -59,15 +59,15 @@ This script use modern Vanilla Javascript and it has no dependencies on external
                                                         Default: true */
                 defaultFilter: 'all'                 // Default filter - Default: all
 
-            }; `
-3. Initialises the class:
+            }; ```
+3. Initialises the class:  
 	` const gallery = new PagJS(options); `
 
 4. Use ` data-categories="1" ` to set the membership of the item element to the respective filter
    Use ` data-filter="all" ` to set to set the filter to be activated on the button	
 
-5. HTML structure could be like this example:
-  ` <div class="filters">
+5. HTML structure could be like this example:  
+  ``` <div class="filters">
         <button data-filter="all">ALL</button>
         <button data-filter="1">FILTER 1</button>
         <button data-filter="2">FILTER 2</button>
@@ -104,21 +104,21 @@ This script use modern Vanilla Javascript and it has no dependencies on external
 		</div>
 	</div>
 
-	<div class="pagination"></div> `
+	<div class="pagination"></div> ```  
 
 
 
 ### === Privacy ===
-PAG JS  doesn't uses LocalStorage to save the setting.
-No data is saved in the database or transferred.
+PAG JS  doesn't uses LocalStorage to save the setting.  
+No data is saved in the database or transferred.  
 
 
 
 ### === Changelog ===
 
 #### = 1.0 =
-* [NEW] - First version of the script written
+* [NEW] - First version of the script written  
 
 
 
-*Everything else used in this script has been created by me (Stefano Fattori), especially for the PAG JS script and is distributed under Commercial license.*
+*Everything else used in this script has been created by me (Stefano Fattori), especially for the PAG JS script and is distributed under Commercial license.*  
