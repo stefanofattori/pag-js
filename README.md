@@ -2,11 +2,11 @@
 
 Script Name: 	PAG JS 
 
-Theme URI:	https://www.stefanofattori.it/pag-js/
+Library URL:	https://www.stefanofattori.it/pag-js/
 
 Author:     	Stefano Fattori
 
-Author URI:	https://www.stefanofattori.it
+Author Website:	https://www.stefanofattori.it
 
 Description: PAG JS is an animated and filterable vanilla Javascript library gallery with pagination, beautiful animations and customisable parameters.
 
@@ -16,7 +16,7 @@ Version:     	1.0
 
 License:    	Commercial
 
-License URI:	https://www.stefanofattori.it/pag-js/license/
+License URL:	https://www.stefanofattori.it/pag-js/license/
 
 
 ## Description
