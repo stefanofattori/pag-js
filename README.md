@@ -25,7 +25,7 @@ The script file size ~ 15 KB
 ```
 OR using CDN with last version:
 ```     
- <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@latest/dist/pag-js.min.js"></script> 
+ <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@main/dist/pag-js.min.js"></script> 
 ```
 OR using CDN with a specific version (change version number after @):
 ```
