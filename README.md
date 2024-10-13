@@ -23,10 +23,14 @@ The script file size ~ 15 KB
 ```
  <script src="pag-js.min.js"></script>   
 ```
-OR using CDN:
+OR using CDN with last version:
 ```     
- <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.3/dist/pag-js.min.js"></script> 
+ <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@latest/dist/pag-js.min.js"></script> 
 ```
+OR using CDN with a specific version (change version number after @):
+```
+ <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.0/dist/pag-js.min.js"></script> 
+``` 
 
 2. Initialises a constant variable with the parameters:  
 ```
