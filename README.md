@@ -25,7 +25,7 @@ The script file size ~ 15 KB
 ```
 OR using CDN:
 ```     
- <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.2/dist/pag-js.min.js"></script> 
+ <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.3/dist/pag-js.min.js"></script> 
 ```
 
 2. Initialises a constant variable with the parameters:  
@@ -125,6 +125,9 @@ No data is saved in the database or transferred.
 
 
 ## === Changelog ===
+
+#### = 1.3 =
+* [NEW] - Added 'current' class to current page button
 
 #### = 1.2 =
 * [FIX] - Added error handling on non-existent html elements
