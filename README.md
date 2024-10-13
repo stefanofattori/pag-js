@@ -25,7 +25,7 @@ The script file size ~ 15 KB
 ```
 OR using CDN:
 ```     
- <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.1/dist/pag-js.min.js"></script> 
+ <script src="https://cdn.jsdelivr.net/gh/stefanofattori/pag-js@v1.2/dist/pag-js.min.js"></script> 
 ```
 
 2. Initialises a constant variable with the parameters:  
