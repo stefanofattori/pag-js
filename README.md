@@ -126,10 +126,12 @@ No data is saved in the database or transferred.
 
 ## === Changelog ===
 
+#### = 1.2 =
+* [FIX] - Added error handling on non-existent html elements
+
 #### = 1.1 =
 * [NEW] - Added add and remove active class to filter buttons elements
 * [NEW] - Set a transition attribute when the container changes its height
-
 
 #### = 1.0 =
 * [NEW] - First version of the script written  
